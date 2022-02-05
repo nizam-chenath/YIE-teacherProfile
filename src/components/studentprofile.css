@@ -1,0 +1,48 @@
+.container{
+    background-color: white;
+    height: 120vh;
+    width: 100vw;
+    position: absolute;
+}
+.student-profile{
+ 
+    margin: 80px 400px;
+}
+.student-profile-container{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+    width: 500px;
+    margin-bottom: 20px;
+}
+.student-profile-container form {
+    padding: 15px;
+    margin: 10px;
+}
+.student-profile-container input{
+    margin: 10px;
+    padding: 5px;
+   
+}
+.student-profile-container img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.student-profile-container span{
+    position: relative;
+    margin-top: -10px;
+    background-color: white;
+  
+}
+.btn-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}

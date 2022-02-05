@@ -1,38 +1,85 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-heading{
   text-align: center;
+  font-size: 38px;
+  color: blue;
+  margin: 30px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-section{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  
+}
+.my-profile{
+  margin-top: 50px;
+  margin-right: 300px;
+}
+.my-profile h2{
+  color: rgb(253, 161, 56);
+  font-size: 30px;
+}
+.my-profile .user-profile a{
+  color: rgb(0, 174, 255);
+
+}
+.my-profile .user-profile{
+  margin: 20px 0px ;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid black;
+}
+.user-profile p{
+  padding: 5px;
+}
+.my-class-profile h2{
+  margin-top: 50px;
+  color: rgb(253, 161, 56);
+  font-size: 30px;
+}
+.my-class-profile .classes-tought{
+  width: 400px;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid black;
+}
+.btn2{
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #a40606;
+  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+  border-radius: 10px;
+  border: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.btn1{
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  border-radius: 8px;
+  border: none;
+  color: white;
+  margin-bottom: 10px;
+}
+.my-class-profile .classes-tought a{
+  color: rgb(0, 174, 255) ;
+}
+.submit-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.submit-section .btn2{
+  margin-left: 500px;
+}
+.edit-student-btn{
+  margin-left: 270px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
