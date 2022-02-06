@@ -5,6 +5,7 @@ import TeacherProfile from './TeacherProfile';
 function Profile1() { 
     const [showStudentProfile, setShowStudentProfile] = useState(false);
     const [showTeacherProfile, setShowTeacherProfile] = useState(false);
+    const [list, setList] = useState(false)
 
     const editStudent=()=>{
         setShowStudentProfile(true)
@@ -12,10 +13,15 @@ function Profile1() {
     const editTeacher=()=>{
         setShowTeacherProfile(true)
     }
+    const showList = ()=>{
+        setList(true);
+    }
 
   return <div className="user-profile">
+
       {showStudentProfile && <StudentProfile/>}
       {showTeacherProfile && <TeacherProfile/>}
+
       <h2 className="main-heading">Teacher Dashboard</h2>
       <div className="profile-section">
           
@@ -36,7 +42,16 @@ function Profile1() {
               <h2>My Class Profile</h2>
               <div className="classes-tought">
                   <p>Classes Tought</p>
-                  <button className="btn2">Science</button><br/>
+                  <button className="btn2" onClick={showList}>Science</button><br/>
+                  {list && 
+                       
+                  <div className="list">
+                      <button className="links">class 10</button>
+                      <button className="links">class 8</button>
+                      <button className="links">class 9</button>
+                      <button className="links">class 7</button>
+                  </div>
+                  }
                   <button className="btn1">Math</button> <br/>
                   <a href="">Users List</a>
               </div>
