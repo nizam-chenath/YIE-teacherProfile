@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import './Quiz.css'
+import './Quiz.css';
+import { useNavigate } from 'react-router-dom';
 
 function Quiz() {
 
@@ -72,9 +73,13 @@ function Quiz() {
     setCurrentQuestion(0);
     setFinalResults(false);
   }
-   const nextPage=()=>{
-     console.log("next level")
-   }
+  
+  let navigate = useNavigate(); 
+  // go to multi correct questions
+  const routeChange = () =>{ 
+    let path = "/quiz2"; 
+    navigate(path);
+  }
    
 
 
@@ -95,7 +100,7 @@ function Quiz() {
           <h1>Result</h1>
           <h2>{score} out of {questions.length}correct - ({(score/questions.length ) * 100}%)</h2>
           <button className="btn1" onClick={() => reStart()}>Once again</button>
-          <button className="btn2" onClick={()=> nextPage()}>Next-Part</button>
+          <button className="btn2" onClick={routeChange}>Next-Part</button>
         </div>
 
         ):(
