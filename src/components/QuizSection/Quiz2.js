@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Quiz2() {
 
@@ -115,9 +116,15 @@ function Quiz2() {
       setCurrentQuestion(0);
       setFinalResults(false);
     }
-     const nextPage=()=>{
-       console.log("next level")
+    
+
+     let navigate = useNavigate(); 
+     // True or False
+     const routeChange = () =>{ 
+       let path = "/quiz3"; 
+       navigate(path);
      }
+      
 
   return (
     <div className="quiz">
@@ -136,7 +143,7 @@ function Quiz2() {
       <h1>Result</h1>
       <h2>{score} out of {questions.length}correct - ({(score/questions.length ) * 100}%)</h2>
       <button className="btn1" onClick={() => reStart()}>Once again</button>
-     
+      <button className="btn2" onClick={routeChange}>Next-Part</button>
     </div>
 
     ):(
